@@ -2,6 +2,8 @@ import requests
 import base64, json
 from dotenv import find_dotenv, load_dotenv
 import os
+import random
+import spotify 
 
 load_dotenv(find_dotenv())
 
@@ -15,7 +17,12 @@ authData = {}
 clientID = os.getenv("clientID")
 clientSecret = os.getenv("clientSecret")
 #artisit IDs
-artistID = "699OTQXzgjhIYAHMy9RyPD"
+Maria = "2sSGPbdZJkaSE2AbcGOACx"
+Nudy = "5yPzzu25VzEk8qrGTLIrE1"
+Gorilla = "3AA28KZvwAUcZuOKwyblJQ"
+
+artistlist = [Maria, Gorilla, Nudy]
+artistID = random.choice(artistlist)
 
 auth_request = requests.post(authUrl, {
     'grant_type': 'client_credentials',
@@ -40,11 +47,9 @@ auth_token = auth_response_data['access_token']
 headers = {
     "Authorization": "Bearer " + auth_token
 }
-
 param = {
     'market' : 'US'
 }
-
 # actual GET request 
 r = requests.get(f"https://api.spotify.com/v1/artists/{artistID}/top-tracks",
         headers=headers, 

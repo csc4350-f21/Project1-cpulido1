@@ -8,7 +8,11 @@
 <body>
     <h1>{{ songName }}</h1>
     <h2>{{ ArtistName }}</h2>
-
+    <h3>
+        <audio controls> <source src="{{ Audio }}"></audio>
+        <a href="{{ lyricsURL }}">text</a>
+    </h3>
+   
     <img src="{{ Image }}" />
 
     <h4>{{ Audio }}</h4>
