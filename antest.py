@@ -5,6 +5,7 @@ import os
 import random
 import spotify 
 
+
 load_dotenv(find_dotenv())
 
 #spotify database url
@@ -81,4 +82,5 @@ def rtn():
     'Image' : Image,
     'Audio' : Audio
     }
+    
 print(json.dumps(rtn(),indent = 2))

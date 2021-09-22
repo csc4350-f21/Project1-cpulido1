@@ -1,0 +1,15 @@
+What are at least 3 technical issues you encountered with your project? How did you fix them?
+
+1. Spotify authenicating, I was having trouble effectively saving the access token so it would be able to be generated upon running the file. Once that was fixed I was able to effectively use the token to search the spotify api
+
+2. Linking the lyris from genius to the click link on the website, i had simple problem that was i hadnt called the lyricsUrl variable in the right folder so the information wasnt going anywhere to i moved it to the correct section
+
+3.
+What are known problems (still existing), if any, with your project? 
+
+currently none
+
+What would you do to improve your project in the future? 
+
+I would initially create a dabatase of songs or pull my songs that displayed from a specified genre or tag from the spotify website, and then randomize those songs, instead of hard coding 3 songs in. This would allow users to geneerate more songs that the uer may not know
+

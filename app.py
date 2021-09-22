@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, render_template
 from antest import rtn
+import lyrics
 
 app = Flask(__name__)
 
@@ -10,13 +11,15 @@ def hello_world():
     """ Returns root endpoint HTML """
 
     artist_data = rtn()
+    lyricdata = lyrics.rtnURL()
 
     return render_template(
         "index.html",
         songName=artist_data['songName'],
         ArtistName=artist_data['ArtistName'],
         Image=artist_data['Image'],
-        Audio=artist_data['Audio']
+        Audio=artist_data['Audio'],
+        lyricsURL=lyricdata['lyricsURL']
 
     )
 if __name__ == '__main__':
