@@ -4,10 +4,11 @@ from flask import Flask, render_template
 from antest import rtn
 import lyrics
 
+
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def main(): ##hello world
     """ Returns root endpoint HTML """
 
     artist_data = rtn()
@@ -20,12 +21,14 @@ def hello_world():
         Image=artist_data['Image'],
         Audio=artist_data['Audio'],
         lyricsURL=lyricdata['lyricsURL']
+    )
 
-    )
-if __name__ == '__main__':
-    app.run(
-      host="localhost", port=8000, debug=True
-    )
+if __name__ == "__main__":
+
+   app.run(host="localhost", port=8000, debug=True)
+
+
+
     #host="localhost", port=8000, debug=True
  #host = '0.0.0.0',
         #port= int(os.getenv("PORT",8080)),

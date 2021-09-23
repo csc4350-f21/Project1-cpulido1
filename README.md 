@@ -4,12 +4,26 @@ What are at least 3 technical issues you encountered with your project? How did 
 
 2. Linking the lyris from genius to the click link on the website, i had simple problem that was i hadnt called the lyricsUrl variable in the right folder so the information wasnt going anywhere to i moved it to the correct section
 
-3.
-What are known problems (still existing), if any, with your project? 
+3. Proper syntac in the Procfile and the requirements.txt, i fixed them by looking at examples and running the syntax over tediously
+Detailed description of 2+ known problems and how you would address them if you had more time. If none exist, what additional features might you implement, and how?
 
-currently none
+1.Heroku deployment, i am not able to get heroku to display my app, even though im having successfull builds , because of my ports i believe i cant have heroku display since it uses it own ports and my app.py relies on specifed ports
+
+2. Port dependency, however i managed to set up my app.py has a dependency to run on specied ports, speciically the local ones, if i had more time id be able ot change around my app.py to rid the dependency.
 
 What would you do to improve your project in the future? 
 
 I would initially create a dabatase of songs or pull my songs that displayed from a specified genre or tag from the spotify website, and then randomize those songs, instead of hard coding 3 songs in. This would allow users to geneerate more songs that the uer may not know
 
+Explains how someone who clones the repository can set up and run your project locally (what to install, any extra files to add).
+
+ in order to run this project locally, the user would have to go ahead and download a good amount of different library's including: Spotify, flask, base64, json, dotenev,os,random, and requests. The user would also require extra files including: a Procfile,requirements.txt, and a .gitignore for hiding sensitvie information needed to access these apis. Last but not least a css and html to style and display the pulled information
+
+ Detailed description of 2+ technical issues and how you solved it (your process, what you searched, what resources you used)
+
+ 1. Spotify authenicating, YOUTUBE YOUTUBE YOUTUBE, this had to be by far my best resource for this project
+ evrything i had trouble on, someone on youtube already madea  tortourial for! I watched 2 videos of these guys just causally linking to the api
+ and authenicating, so go over it and rewatching the steps really helped me learn whst to do.
+
+ 2. Initially getting the page to load, So this one i couldnt use youtube because it was a little too specific, but overall stack overflow and googledocs of manuels is alwasy my go to, i usually search my error problem not my code, i will look for the closest 
+ person to having the same issue and piece together what problems they have that we do adn dont share, from there i had to find little pieces of what i missing and need and slpw;y assembled till i had the first page pull up
