@@ -3,7 +3,7 @@ import base64, json
 from dotenv import find_dotenv, load_dotenv
 import os
 import random
-import spotify 
+
 
 
 load_dotenv(find_dotenv())

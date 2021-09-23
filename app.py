@@ -23,4 +23,8 @@ def hello_world():
 
     )
 if __name__ == '__main__':
-    app.run(host="localhost", port=8000, debug=True)
+    app.run()
+    #host="localhost", port=8000, debug=True
+
+#localhost
+#8000
