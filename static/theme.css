@@ -1,15 +1,13 @@
-img{
-    height: 450;
-    width: auto;
+body {
+  background-color: lightblue;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
-body {background-color: rgb(248, 248, 248);}
 
-h1 {
-    color: rgb(21, 121, 51);
-  }
-  h2 {
-    color: rgb(80, 3, 73);
-  }
-  h3 {
-    color: rgb(97, 65, 94);
-  }
+img {
+  border-radius: 25px;
+}
+
+audio {
+  padding-bottom: 30px;
+}
