@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-    <form>
-        <label for="fname">Usermname:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Password:</label><br>
-        <input type="text" id="lname" name="lname">
-        <input type="submit" value="Submit">
-      </form>
+    
 <head>
     <link rel="stylesheet" href={{ url_for( "static", filename='theme.css' ) }} />
-</head>
 
+</head>
+<form method="post" action="/login">
+    <input type="text" name="username" placeholder="Your Username">
+    <input type="password" name="password" placeholder="Your Password">
+    <input type="submit" value="Submit">
 <body>
     <h1>SPOTIFY</h1>
     <h2>{{ songName }}</h2>
     <h3>{{ ArtistName }}</h3>
-    <h3> <a href="{{ lyricsURL }}">link here!</a></h3>
-    
-        <h4><audio controls> <source src="{{ Audio }}"></audio></h4>
-   
-    <img src="{{ Image }}" />
 
+    <div> 
+        <img src="{{ Image }}"width=300 height=300/>
+   
+    </div>
+
+    <div> 
+        <audio controls> 
+            <source src="{{ Audio }}">
+        </audio>
+    </div> 
+       <a href="{{ lyricsURL }}">link here!</a> 
+   </body> 
+</html>
  

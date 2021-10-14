@@ -25,18 +25,18 @@ def main(): ##hello world
     )
 if __name__ == "__main__":
 
-    app.run(host=os.getenv('IP', '0.0.0.0'),
-		port=int(os.getenv('PORT', 8080)),
-		debug=True
+    app.run(host="localhost", port=8000, debug=True
     #from waitress import servehe
     #serve
     #(app, host="0.0.0.0", port=8080)
 )
-
+#host=os.getenv('IP', '0.0.0.0'),
+		#port=int(os.getenv('PORT', 8080)),
+		#debug=True
+   
     #app.run(host="localhost", port=8000, debug=True
- #host = '0.0.0.0',
-        #port= int(os.getenv("PORT",8080)),
-#localhost
-#8000
-#####
-# Route for handling the login page logic
+@app.route('/login')
+def Login():
+    title = "Login In to SPpotfiy!"
+    return render_template("login.html", title = title)
+
